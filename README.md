@@ -14,7 +14,6 @@ Process 5000+ financial transactions with extraction, cleaning, validation, and 
 ## Usage
 ```python
 from extract import generate_sample_emails
-from quality_monitor import QualityMonitor
 from categorize import categorize_transactions
 
 # Generate 5000 records
@@ -22,10 +21,6 @@ transactions = generate_sample_emails(5000)
 
 # Extract & clean
 extracted = extract_batch(transactions)
-
-# Monitor quality
-monitor = QualityMonitor()
-report = monitor.generate_report(extracted)
 
 # Categorize with GAAP
 categorized = categorize_transactions(extracted)
